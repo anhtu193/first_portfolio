@@ -71,6 +71,10 @@
 		flex-wrap: wrap;
 	}
 
+	.text-container {
+		text-align: justify;
+	}
+
 	.contact-info-container {
 		margin: 0;
 	}
