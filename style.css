@@ -69,10 +69,12 @@ a:hover {
 /* Hamburger menu */
 #hamburger-nav {
 	display: none;
+	background-color: white;
 }
 
 .hamburger-menu {
 	position: relative;
+
 	display: inline-block;
 }
 
@@ -95,9 +97,13 @@ a:hover {
 .menu-links {
 	position: absolute;
 	top: 100%;
+	width: fit-content;
+
 	right: 0;
 	background-color: white;
-	width: fit-content;
+	z-index: 5;
+	border-radius: 0.5rem;
+
 	max-height: 0;
 	overflow: hidden;
 	transition: all 300ms ease-in-out;
@@ -169,6 +175,7 @@ section {
 	display: flex;
 	height: 400px;
 	width: 400px;
+	justify-content: center;
 	margin: auto 0;
 }
 
