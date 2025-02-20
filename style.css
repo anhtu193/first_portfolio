@@ -98,6 +98,7 @@ a:hover {
 	position: absolute;
 	top: 100%;
 	width: fit-content;
+	padding: 0 2rem;
 	right: 0;
 	background-color: white;
 	z-index: 5;
