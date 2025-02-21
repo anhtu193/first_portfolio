@@ -439,3 +439,27 @@ footer {
 .copyright {
 	text-align: center;
 }
+
+.arrow {
+	animation: pointdown 1000ms infinite alternate-reverse;
+}
+
+@keyframes pointdown {
+	0% {
+		transform: translateY(0px);
+	}
+
+	100% {
+		transform: translateY(16px);
+	}
+}
+
+@keyframes pointup {
+	0% {
+		transform: translateY(46px) rotate(180deg);
+	}
+
+	100% {
+		transform: translateY(72px) rotate(180deg);
+	}
+}

@@ -511,10 +511,14 @@
 			<img
 				src="./assets/arrow.png"
 				alt="Go to next section"
-				class="icon arrow"
+				class="icon arrow-back"
 				style="
 					transform: rotate(180deg) translateY(-3.5rem);
 					scroll-behavior: smooth;
+					position: absolute;
+					right: -5rem;
+					bottom: 2rem;
+					animation: pointup 1000ms infinite alternate-reverse;
 				"
 				onclick="location.href='./#'"
 			/>
