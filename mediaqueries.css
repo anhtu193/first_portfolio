@@ -115,4 +115,8 @@
 	.text-container {
 		text-align: justify;
 	}
+
+	.typewriter h1 {
+		font-size: 1rem;
+	}
 }

@@ -318,6 +318,9 @@ section {
 
 #experience {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .experience-sub-title {
@@ -462,5 +465,50 @@ footer {
 
 	100% {
 		transform: translateY(72px) rotate(180deg);
+	}
+}
+
+.typewriter {
+	width: fit-content;
+}
+
+.typewriter h1 {
+	color: #000;
+	width: fit-content;
+	font-family: monospace;
+	font-size: 1.5rem;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 0.15em; /* Adjust as needed */
+	animation: typing 4.5s steps(30, end) infinite,
+		blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	0% {
+		width: 0; /* Start with 0 width */
+	}
+	33% {
+		width: 100%; /* Expand to full width */
+	}
+	67% {
+		width: 100%; /* Pause at full width */
+	}
+	100% {
+		width: 0; /* Shrink back to 0 width */
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: orange;
 	}
 }
