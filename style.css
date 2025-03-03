@@ -281,12 +281,6 @@ section {
 	border-radius: 2rem;
 }
 
-.arrow {
-	position: absolute;
-	right: -5rem;
-	bottom: 2rem;
-}
-
 .details-container {
 	padding: 1.5rem;
 	flex: 1;
@@ -354,51 +348,11 @@ article {
 	cursor: default;
 }
 
-/* Projects section */
-#projects {
-	position: relative;
-}
-
 .color-container {
 	border-color: rgb(163, 163, 163);
 	background: rgb(250, 250, 250);
 	padding: 2rem 0;
 	height: fit-content;
-}
-
-.project-img {
-	border-radius: 2rem;
-	width: 90%;
-	height: 90%;
-	object-fit: cover;
-	box-shadow: 2px 2px 14px -3px rgba(77, 77, 77, 0.75);
-	-webkit-box-shadow: 2px 2px 14px -3px rgba(77, 77, 77, 0.75);
-	-moz-box-shadow: 2px 2px 14px -3px rgba(77, 77, 77, 0.75);
-}
-
-.project-title {
-	margin: 0.5rem;
-	color: black;
-}
-
-.project-btn {
-	color: black;
-	border-color: rgb(163, 163, 163);
-}
-
-.tech-used {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	cursor: default;
-}
-
-.tech-used span {
-	padding: 0.1rem 0.5rem;
-	border: rgb(163, 163, 163) 1px solid;
-	border-radius: 1rem;
-	font-size: 0.9rem;
-	color: rgb(163, 163, 163);
 }
 
 #contact {
@@ -510,5 +464,99 @@ footer {
 	}
 	50% {
 		border-color: orange;
+	}
+}
+
+/* @keyframes change-background {
+	0% {
+	}
+} */
+
+/* Projects section */
+#projects {
+	position: relative;
+	overflow-x: hidden;
+	margin: 0 0rem 3.5rem 0rem;
+}
+
+.arrow {
+	position: absolute;
+	right: -5rem;
+	bottom: 2rem;
+	z-index: 2;
+}
+
+.project-arrow {
+	right: 5rem;
+}
+
+.projects-slider {
+	display: flex;
+	overflow-x: visible;
+	scroll-snap-type: x mandatory;
+	gap: 2rem;
+	padding: 1rem;
+	width: fit-content;
+	scroll-behavior: smooth;
+	animation: slide 10s linear infinite;
+}
+
+.slider:hover .projects-slider {
+	animation-play-state: paused; /* Pause the animation on hover */
+}
+
+.project-card img {
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.project-card h2 {
+	font-size: 1.5rem;
+	margin: 0.5rem 0;
+}
+
+.project-card .tech-used {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.project-card .tech-used span {
+	background: #f0f0f0;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+}
+
+.project-card .btn-container {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.project-card {
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	background: white;
+	border-radius: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.205);
+	padding: 1rem;
+	width: 350px;
+	height: fit-content;
+}
+
+.slider {
+	display: flex;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
 	}
 }
