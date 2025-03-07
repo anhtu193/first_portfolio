@@ -189,6 +189,7 @@ section {
 
 .section__text__p1 {
 	text-align: center;
+	font-size: 1.25rem;
 }
 
 .section__text__p2 {
@@ -342,9 +343,9 @@ section {
 
 article {
 	display: flex;
-	width: 10rem;
+	width: 11rem;
 	gap: 1rem;
-	justify-content: space-around;
+	justify-content: start;
 	cursor: default;
 }
 
@@ -559,4 +560,13 @@ footer {
 	100% {
 		transform: translateX(-100%);
 	}
+}
+
+.social-icon {
+	cursor: pointer;
+	transition: all 300ms ease;
+}
+
+.social-icon:hover {
+	transform: scale(1.2);
 }
